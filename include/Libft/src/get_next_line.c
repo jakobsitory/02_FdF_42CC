@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 11:32:02 by jschott           #+#    #+#             */
-/*   Updated: 2023/09/28 09:10:59 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:54:47 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
+/**
+ * Shortens a string by removing the content up to and including the first newline character.
+ * 
+ * @param line The original string to be shortened.
+ * @return A new string that starts after the first newline in `line`, or NULL under certain conditions.
+ */
 char	*shorten(char *line)
 {
 	char	*rest;
@@ -37,6 +43,12 @@ char	*shorten(char *line)
 	return (rest);
 }
 
+/**
+ * Extracts a line from a string, including the newline character.
+ * 
+ * @param line The original string from which to extract the line.
+ * @return A new string containing the extracted line, or NULL if memory allocation fails.
+ */
 char	*extract(char *line)
 {
 	char	*result;
@@ -59,6 +71,16 @@ char	*extract(char *line)
 	return (result);
 }
 
+/**
+ * Helper function to append buffer content to a line until a newline is found.
+ * returns the updated line.
+ * 
+ * @param fd The file descriptor from which to read.
+ * @param r_len Pointer to an integer that stores the read length.
+ * @param line The initial line to which buffer content is appended.
+ * @param buffer The buffer used for reading from `fd`.
+ * @return The updated line after appending buffer content, or NULL if memory allocation fails.
+ */
 char	*al_helper(int fd, int *r_len, char *line, char *buffer)
 {
 	char	*new_line;
@@ -83,6 +105,14 @@ char	*al_helper(int fd, int *r_len, char *line, char *buffer)
 	return (new_line);
 }
 
+/**
+ * Reads from a file descriptor and appends the content to a line until a newline is found.
+ * 
+ * @param fd The file descriptor from which to read.
+ * @param r_len Pointer to an integer that stores the read length.
+ * @param line The initial line to which the read content is appended.
+ * @return The updated line after reading and appending content, or NULL in case of errors.
+ */
 char	*add_line(int fd, int *r_len, char *line)
 {
 	char	*buffer;
@@ -108,6 +138,12 @@ char	*add_line(int fd, int *r_len, char *line)
 	return (new_line);
 }
 
+/**
+ * Retrieves the next line from a file descriptor, including the newline character.
+ * 
+ * @param fd The file descriptor from which to read.
+ * @return The next line from the file descriptor, or NULL if no more lines are available or in case of errors.
+ */
 char	*get_next_line(int fd)
 {
 	static char	*line;

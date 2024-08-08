@@ -3,15 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:21:39 by jschott           #+#    #+#             */
-/*   Updated: 2023/05/24 16:32:14 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:21:11 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Copies a string into another, ensuring the target is null-terminated.
+ * 
+ * @param dest The buffer where the string is copied to.
+ * @param src The source string to copy from.
+ * @param size The size of the destination buffer.
+ * @return The total length of the string it tried to create, meaning the length of `src`.
+ */
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;

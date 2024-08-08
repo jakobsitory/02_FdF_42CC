@@ -3,15 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   vctr_normalize.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:28:33 by jschott           #+#    #+#             */
-/*   Updated: 2023/09/26 13:23:14 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:59:00 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../FdF.h"
 
+/**
+ * Finds the largest of three floating-point numbers.
+ * 
+ * @param one The first floating-point number.
+ * @param two The second floating-point number.
+ * @param three The third floating-point number.
+ * @return The largest of the three numbers.
+ */
 float	biggest_of_three(float one, float two, float three)
 {
 	if (one >= two && one >= three)
@@ -20,6 +28,14 @@ float	biggest_of_three(float one, float two, float three)
 		return (two);
 	return (three);
 }
+
+/**
+ * Normalizes a linked list of vectors based on the maximum absolute values among x, y, and z coordinates.
+ * 
+ * @param vctr Pointer to the first vector in the linked list to be normalized.
+ * @param min Pointer to the vector containing the minimum x, y, and z coordinates.
+ * @param max Pointer to the vector containing the maximum x, y, and z coordinates.
+ */
 
 void	vctr_normalize(t_vector *vctr, t_vector *min, t_vector *max)
 {
@@ -43,6 +59,11 @@ void	vctr_normalize(t_vector *vctr, t_vector *min, t_vector *max)
 	}
 }
 
+/**
+ * Normalizes the vectors in a scene based on the maximum absolute values among x, y, and z coordinates.
+ * 
+ * @param scene Pointer to the scene structure containing the map of vectors to be normalized.
+ */
 void	scn_normalize(t_scene *scene)
 {
 	t_vector	*ptr;

@@ -3,15 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 17:10:44 by jschott           #+#    #+#             */
-/*   Updated: 2023/05/24 16:32:16 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:20:25 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Applies a function to each character of a string to create a new string.
+ * 
+ * If allocation fails or `s` is NULL, the function returns NULL.
+ * 
+ * @param s The input string.
+ * @param f The function to apply to each character of `s`.
+ * @return A newly allocated string formed by applying `f` to each character of `s`, or NULL on failure.
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;

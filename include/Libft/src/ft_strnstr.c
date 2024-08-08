@@ -3,15 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:33:43 by jschott           #+#    #+#             */
-/*   Updated: 2023/05/24 16:32:16 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:19:39 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Locates a substring in a string, searching up to a maximum length.
+ * 
+ * @param big The string to search in.
+ * @param little The substring to search for.
+ * @param len The maximum number of characters to search.
+ * @return A pointer to the beginning of the located substring, or NULL if the substring is not found.
+ */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

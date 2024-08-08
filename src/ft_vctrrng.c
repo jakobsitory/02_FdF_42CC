@@ -3,14 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vctrrng.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 12:39:09 by jschott           #+#    #+#             */
-/*   Updated: 2023/09/20 14:04:52 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 11:04:20 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../FdF.h"
+
+/**
+ * Finds the largest absolute value between two floats.
+ * 
+ * @param a The first floating-point number.
+ * @param b The second floating-point number.
+ * @return The larger absolute value of `a` and `b`.
+ */
 
 float	bigger_abs(float a, float b)
 {
@@ -24,6 +32,12 @@ float	bigger_abs(float a, float b)
 		return (a);
 }
 
+/**
+ * Calculates the range of vector coordinates in a linked list.
+ * 
+ * @param pnt Pointer to the first vector in the linked list.
+ * @return The largest absolute value among the minimum and maximum coordinates in the list.
+ */
 float	ft_vctrrng(t_vector *pnt)
 {
 	float	max;

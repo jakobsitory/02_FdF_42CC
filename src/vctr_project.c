@@ -3,20 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   vctr_project.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 12:03:49 by jschott           #+#    #+#             */
-/*   Updated: 2023/10/02 10:16:06 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:59:44 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../FdF.h"
 
+/**
+ * Converts degrees to radians.
+ * 
+ * @param degrees The angle in degrees to be converted.
+ * @return The angle converted to radians.
+ */
 float	degr_to_rad(int degrees)
 {
 	return (degrees * (M_PI / 180));
 }
 
+/**
+ * Applies isometric projection to a vector.
+ * 
+ * @param vctr Pointer to the vector to be projected.
+ * @return A new vector representing the isometric projection of the input vector.
+ */
 t_vector	*isometric(t_vector *vctr)
 {
 	float		vctr_x;
@@ -33,6 +45,11 @@ t_vector	*isometric(t_vector *vctr)
 						0.0));
 }
 
+/**
+ * Projects all vectors in a scene using isometric projection.
+ * 
+ * @param scene Pointer to the scene structure containing the map of vectors to be projected.
+ */
 void	project(t_scene *scene)
 {
 	t_vector	*pntr;

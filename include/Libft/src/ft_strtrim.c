@@ -3,15 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 11:50:36 by jschott           #+#    #+#             */
-/*   Updated: 2023/05/24 16:32:18 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:18:17 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Trims characters from both ends of a string.
+ * 
+ * @param s1 The string to be trimmed.
+ * @param set The set of characters to trim from `s1`.
+ * @return A newly allocated string with the trimmed content, or NULL on allocation failure.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;

@@ -3,15 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 10:43:43 by jschott           #+#    #+#             */
-/*   Updated: 2023/06/28 15:16:13 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:54:22 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/**
+ * Handles formatting and printing of various data types based on format specifiers.
+ * 
+ * @param c Pointer to the format specifier character.
+ * @param arg The variable argument list containing the data to be printed.
+ * @return The number of characters printed, or 1 if a percent sign is printed.
+ */
 int	check_type(const char *c, va_list arg)
 {
 	int	i;
@@ -36,6 +43,13 @@ int	check_type(const char *c, va_list arg)
 	return (i);
 }
 
+/**
+ * Custom implementation of the printf function.
+ * 
+ * @param format The format string containing text to be printed and format specifiers.
+ * @param ... Variable arguments corresponding to the format specifiers in `format`.
+ * @return The total number of characters printed.
+ */
 int	ft_printf(const char *format, ...)
 {
 	int		i;

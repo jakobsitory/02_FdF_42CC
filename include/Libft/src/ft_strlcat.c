@@ -3,15 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:21:48 by jschott           #+#    #+#             */
-/*   Updated: 2023/05/24 16:32:13 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:21:36 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Appends the string `src` to the end of `dest`, but takes the full size of the destination buffer
+ * and guarantees NUL-termination if there is room. Note that room for the NUL should be included in `size`.
+ * 
+ * @param dest The destination string to which `src` is appended.
+ * @param src The source string to append to `dest`.
+ * @param size The size of the destination buffer (including space for the null terminator).
+ * @return The total length of the string it tried to create, which is the initial length of `dest`
+ *         plus the length of `src`. If the return value is >= `size`, the output string has been truncated.
+ */
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned int	i;

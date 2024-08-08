@@ -6,12 +6,18 @@
 /*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 14:40:17 by jschott           #+#    #+#             */
-/*   Updated: 2023/11/17 12:47:37 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 11:02:54 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../FdF.h"
 
+/**
+ * Counts the number of valid numeric strings in an array.
+ * 
+ * @param argv The array of strings to be checked.
+ * @return The count of valid numeric strings in the array, or 0 if any string is invalid.
+ */
 int	num_str(char **argv)
 {
 	int	i;
@@ -35,6 +41,14 @@ int	num_str(char **argv)
 	return (i);
 }
 
+/**
+ * Reads a line from input, splits it into values, and adds them as vectors to a map.
+ * 
+ * @param map Pointer to the pointer of the first vector in the map.
+ * @param input The input line to be processed.
+ * @param y The y-coordinate for the vectors to be added.
+ * @return The number of vectors added to the map, or 0 if an error occurs.
+ */
 int	read_line(t_vector **map, char *input, int y)
 {
 	char	*trimmed_input;
@@ -63,6 +77,11 @@ int	read_line(t_vector **map, char *input, int y)
 	return (i);
 }
 
+/**
+ * Reads a file and creates a map of vectors from its contents.
+ * 
+ * @param fd The file descriptor of the file to be read.
+ * @r
 t_vector	*read_file(int fd)
 {
 	char		*input;
@@ -87,6 +106,12 @@ t_vector	*read_file(int fd)
 	return (map);
 }
 
+/**
+ * Creates a map of points from a file.
+ * 
+ * @param file The name of the file to be processed.
+ * @return A pointer to the first vector in the created map, or an error message if the operation fails.
+ */
 t_vector	*create_points(char *file)
 {
 	t_vector	*map;

@@ -3,15 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   scn_init.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:38:43 by jschott           #+#    #+#             */
-/*   Updated: 2023/10/02 09:32:18 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 11:00:42 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../FdF.h"
 
+/**
+ * Initializes a scene with a given map of vectors.
+ * 
+ * Key steps in the initialization process include:
+ * - Allocating memory for the `t_scene` structure.
+ * - Setting the `map` field to the provided map of vectors.
+ * - Initializing vector fields (`max_vctr`, `min_vctr`, `center`, `rotation`, `translate`) with default values.
+ * - Calculating the scene's width and height based on the map.
+ * - Setting the default zoom level and projection mode.
+ * - Normalizing the scene using `scn_normalize`.
+ * 
+ * If any of the vector fields fail to initialize, the function calls `scn_dstr` to destroy the scene and free
+ * allocated resources before returning NULL.
+ * 
+ * @param map Pointer to the first vector in the linked list representing the map of vectors.
+ * @return Pointer to the initialized `t_scene` structure, or NULL if initialization fails.
+ */
 t_scene	*scn_init(t_vector *map)
 {
 	static t_scene	*scene;
@@ -41,6 +58,11 @@ t_scene	*scn_init(t_vector *map)
 	return (scene);
 }
 
+/**
+ * Destroys a scene and frees allocated resources.
+ * 
+ * @param scene Pointer to the `t_scene` structure to be destroyed.
+ */
 void	scn_dstr(t_scene *scene)
 {
 	ft_vctrclear (&scene->map, free);

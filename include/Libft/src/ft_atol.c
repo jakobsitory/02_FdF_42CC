@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:33:53 by jschott           #+#    #+#             */
-/*   Updated: 2023/08/24 14:35:51 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:54:33 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Converts a string to a long integer.
+ * 
+ * @param str The string to be converted.
+ * @return The converted long integer, or 0 if no conversion could be performed.
+ */
 long	ft_toli(const char *str)
 {
 	int		i;
@@ -27,6 +33,12 @@ long	ft_toli(const char *str)
 	return (nb);
 }
 
+/**
+ * Converts a string to a long integer, considering leading whitespace and sign.
+ * 
+ * @param str The string to be converted.
+ * @return The converted long integer, or 0 if no conversion could be performed.
+ */
 long	ft_atol(const char *str)
 {
 	long int	i;

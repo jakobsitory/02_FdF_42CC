@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 13:15:14 by jschott           #+#    #+#             */
-/*   Updated: 2023/05/24 16:31:53 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:34:32 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Swaps the values of two characters.
+ * 
+ * @param tab1 Pointer to the first character to be swapped.
+ * @param tab2 Pointer to the second character to be swapped.
+ */
 void	ft_swap(char *tab1, char *tab2)
 {
 	char	memory;
@@ -21,6 +27,12 @@ void	ft_swap(char *tab1, char *tab2)
 	*tab2 = memory;
 }
 
+/**
+ * Reverses a string in place.
+ * 
+ * @param tab The string to be reversed.
+ * @param size The size of the string.
+ */
 void	ft_revstr(char *tab, int size)
 {
 	int	i;
@@ -33,6 +45,12 @@ void	ft_revstr(char *tab, int size)
 	}
 }
 
+/**
+ * Recursively fills a string with the digits of a long integer.
+ * 
+ * @param str The string buffer where the digits of `n` will be stored.
+ * @param n The long integer to be converted into a string.
+ */
 void	ft_iina(char *str, long int n)
 {
 	if (n < 0)
@@ -42,6 +60,12 @@ void	ft_iina(char *str, long int n)
 	str[0] = n % 10 + '0';
 }
 
+/**
+ * Calculates the number of digits in a long integer.
+ * 
+ * @param nb The long integer whose digits are to be counted.
+ * @return The number of digits in `nb`.
+ */
 int	ft_itodigs(long int nb)
 {
 	int			digits;
@@ -55,6 +79,12 @@ int	ft_itodigs(long int nb)
 	return (digits);
 }
 
+/**
+ * Converts an integer to its string representation.
+ * 
+ * @param n The integer to convert.
+ * @return A pointer to the string representing the integer, or NULL if memory allocation fails.
+ */
 char	*ft_itoa(int n)
 {
 	char		*str;

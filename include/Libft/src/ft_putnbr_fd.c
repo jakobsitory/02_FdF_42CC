@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 17:48:13 by jschott           #+#    #+#             */
-/*   Updated: 2023/05/24 16:32:07 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:25:36 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Writes an integer to a given file descriptor.
+ * 
+ * @param n The integer to write.
+ * @param fd The file descriptor to which the integer is written.
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)

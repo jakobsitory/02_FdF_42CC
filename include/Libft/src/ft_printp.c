@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 15:15:49 by jschott           #+#    #+#             */
-/*   Updated: 2023/06/05 14:30:30 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/08 10:54:30 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/**
+ * Prints a pointer address to the standard output.
+ * 
+ * @param ptr The pointer whose memory address is to be printed.
+ * @return The number of characters printed to the standard output.
+ */
 int	ft_printp(void *ptr)
 {
 	if (ptr == 0)
