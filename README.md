@@ -1,6 +1,8 @@
 # FdF
 The **FdF** project is a challenge within the 42 School curriculum aimed at deepening students' understanding of computer graphics, 3D projections, and algorithmic design in C. The goal is to create a 3D wireframe model representation of a landscape from a file containing height maps, and to display this model in a window using the MinilibX library.
 
+![](./fdf_demo.gif)
+
 ## **Task**
 
 The task was to implement a program that reads a file containing a map of heights and creates a 3D representation of this data using a wireframe model. The program needs to handle various tasks such as:
