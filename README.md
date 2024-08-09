@@ -24,7 +24,7 @@ The task was to implement a program that reads a file containing a map of height
 To install the Project, follow these steps:
 1. Clone the repository: **`git clone git@github.com:jakobsitory/02_FdF_42CC.git`**
 2. Navigate to the project directory: **`cd FdF`**
-4. Build the project: **`make`**
+4. Build the project: **`make bonus`**
 
 ## **Usage**
 1. Run the program with a map file: **`./fdf [map_file]`** (map files can be found in the **`tests`** directory)
