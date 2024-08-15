@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printx.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 15:15:49 by jschott           #+#    #+#             */
-/*   Updated: 2024/08/08 10:54:38 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/15 12:42:19 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * @param nb The number to be converted to hexadecimal.
  * @return The number of hexadecimal digits in `nb`.
  */
-int	ft_xtodigs(unsigned long int nb)
+int	ft_xtodigs(long int nb)
 {
 	int			digits;
 

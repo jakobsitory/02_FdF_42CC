@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   regex.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jschott <jschott@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 14:40:17 by jschott           #+#    #+#             */
-/*   Updated: 2024/08/08 11:02:54 by jschott          ###   ########.fr       */
+/*   Updated: 2024/08/15 12:46:27 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ int	read_line(t_vector **map, char *input, int y)
  * 
  * @param fd The file descriptor of the file to be read.
  * @r
+ */
 t_vector	*read_file(int fd)
 {
 	char		*input;
